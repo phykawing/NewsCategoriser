@@ -11,3 +11,4 @@ langchain-huggingface
 faiss-cpu  # or faiss-gpu if you're using GPU; adjust based on your environment
 torch  # required for HuggingFace embeddings
 transformers  # for model handling with HuggingFace
+sentence-transformers
