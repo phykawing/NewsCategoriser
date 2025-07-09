@@ -175,3 +175,66 @@ Example sources integrated via RSS and scraping:
 - 執行需具備網路連線，以擷取即時新聞。
 - 若資料量龐大，建議加上快取或分批處理機制。
 - 擷取資料請遵守各新聞網站的使用政策與版權規定。
+
+
+## 💻 Streamlit App Interface
+
+In addition to the Jupyter notebook, this project includes a Streamlit web app for interactive use.
+
+## 💻 Streamlit 應用介面
+
+除了 Jupyter Notebook，本專案亦包含一個基於 Streamlit 的網頁應用程式，供互動使用。
+
+### 📂 Files
+- `app.py` – Streamlit-based UI for uploading labeled datasets and retrieving matching news.
+- `news_pipeline.py` – Core logic for embedding generation and news retrieval pipelines.
+
+### 📂 檔案說明
+
+- `app.py` – 使用 Streamlit 架設的介面，用於上傳標記資料集並檢索相似新聞。
+- `news_pipeline.py` – 負責嵌入生成與新聞檢索流程的核心邏輯。
+
+### ▶️ Running the App
+
+Make sure all dependencies are installed (including `streamlit`, `langchain`, `huggingface_hub`, `faiss`, `bs4`, etc.).
+
+Then, launch the app with:
+
+```bash
+streamlit run app.py
+```
+
+### ▶️ 執行應用程式
+
+請先確保已安裝所有必要套件（包括 `streamlit`、`langchain`、`huggingface_hub`、`faiss`、`bs4` 等）。
+
+接著使用以下指令啟動應用程式：
+
+```bash
+streamlit run app.py
+```
+
+### 🧭 Functionality
+
+- Upload your `NewsDataSave.csv` via the UI.
+- Adjust similarity threshold with a slider.
+- Click “Run News Retrieval” to:
+  - Generate topic embeddings.
+  - Fetch and embed articles from:
+    - Mingpao
+    - Oriental Daily
+    - HK Government News
+  - Match and display articles exceeding the similarity threshold.
+
+### 🧭 功能說明
+
+- 透過網頁介面上傳 `NewsDataSave.csv`。
+- 可使用滑桿調整相似度門檻。
+- 點擊「Run News Retrieval（執行新聞檢索）」按鈕，即可：
+  - 產生主題嵌入向量。
+  - 擷取並嵌入下列來源的新聞：
+    - 明報
+    - 東方日報
+    - 香港政府新聞
+  - 篩選並顯示超過指定相似度門檻的新聞文章。
+
