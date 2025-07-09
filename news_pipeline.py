@@ -10,10 +10,13 @@ from langchain.schema import Document as LangchainDocument
 import numpy as np
 import time
 import requests
+import torch
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Initialize embedding model
 model_name = "BAAI/bge-m3"
-model_kwargs = {'device': 'cuda'}
+model_kwargs = {'device': device}
 encode_kwargs = {'normalize_embeddings': True} # True: Normalize for cosine similarity
 embeddings = HuggingFaceEmbeddings(
     model_name=model_name,
