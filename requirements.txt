@@ -1,0 +1,13 @@
+streamlit
+pandas
+feedparser
+beautifulsoup4
+python-dateutil
+requests
+numpy
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu  # or faiss-gpu if you're using GPU; adjust based on your environment
+torch  # required for HuggingFace embeddings
+transformers  # for model handling with HuggingFace
